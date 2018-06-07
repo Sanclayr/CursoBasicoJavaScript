@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Arrays in JS</h1>
+
+        <script>
+            var arr1 = new Array("Red", 10, 20.4);
+            var arr2 = Array("Blue", 12, 30.2, arr1);
+            var arr3 = ["orange", 10, 23.5, arr1, arr2]
+
+            document.write("<p>Arr1: " + arr1[0] + "</p>");
+            document.write("<p>Arr1: " + arr1[1] + "</p>");
+            document.write("<p>Arr1 Length: " + arr1.length + "</p>");
+            document.write("<p>Arr1 Length: " + arr1.length + "</p>");
+
+        </script>
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <h1>Methods of Arrays</h1>
+            <strong> concat() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4);
+                var arr2 = Array("Blue", 12, 30.2, arr1);
+                arr1 = arr1.concat(arr2);
+                document.write("<p> concat(): " + arr1 + "</p>");
+            </script>
+        </div>
+
+        <div class="row">
+            <strong> join() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4);
+                var arr2 = Array("Blue", 12, 30.2, arr1);
+                arr1 = arr1.concat(arr2);
+                var list = arr1.join(" - ");
+                document.write("<p> join(): " + list + "</p>");
+            </script>
+        </div>
+
+        <div class="row">
+            <strong> push() </strong>
+            <br>
+            <script>
+                var arr3 = new Array("Red", 10, 20.4);
+                arr3.push("New Element");
+                document.write("<p> push(): " + arr3 + "</p>");
+            </script>
+        </div>
+
+        <div class="row">
+            <strong> pop() </strong>
+            <br>
+            <script>
+                arr3.pop();
+                document.write("<p> pop(): " + arr3 + "</p>");
+            </script>
+        </div>
+
+        <div class="row">
+            <strong> shift() </strong>
+            <br>
+            <script>
+                arr3.shift();
+                document.write("<p> shift(): " + arr3 + "</p>");
+            </script>
+        </div>
+    </div>
+
+</body>
+
+</html>
