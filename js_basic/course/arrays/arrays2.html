@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Methods of Arrays - Aula 2</h1>
+        <div class="row">
+            <strong> unshift() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4);
+                arr1.unshift("New El");
+                var list = arr1.join(" - ")
+                document.write("<p> unshift(): " + arr1 + "</p>");
+            </script>
+        </div>
+        <div class="row">
+            <strong> slice() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4, "Neo");
+                var newArray = arr1.slice(1, 4);
+                var list = newArray.join(" - ")
+                document.write("<p> slice(): " + newArray + "</p>");
+            </script>
+        </div>
+        <div class="row">
+            <strong> splice() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4, "Neo");
+                arr1.splice(1, 2, "A", "B", "C");
+                //var list = arr1.join(" - ")
+                document.write("<p> splice(): " + arr1 + "</p>");
+            </script>
+        </div>
+        <div class="row">
+            <strong> reverse() </strong>
+            <br>
+            <script>
+                var arr1 = new Array("Red", 10, 20.4, "Neo");
+                arr1.reverse();
+                //var list = arr1.join(" - ")
+                document.write("<p> reverse(): " + arr1 + "</p>");
+            </script>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
