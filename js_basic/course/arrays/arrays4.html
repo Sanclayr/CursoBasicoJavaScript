@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Methods of Arrays - Aula 4</h1>
+        <div class="row">
+            <strong> indexOf() </strong>
+            <br>
+            <script>
+                var arr1 = ["Laranja", "Azul", "Vermelho", "Azul", "Verde"];
+                var ret = arr1.indexOf("Azul");
+                document.write("<p>indexOf() :" + ret + " value = " + arr1[ret] + "</p>")
+            </script>
+        </div>
+        <div class="row">
+            <strong> indexOf(searchElement[, fromIndex]) </strong>
+            <br>
+            <script>
+                var arr1 = ["Laranja", "Azul", "Vermelho", "Azul", "Verde"];
+                var ret = arr1.indexOf("Azul", 2);
+                document.write("<p>indexOf(searchElement[, fromIndex]) :" + ret + " value = " + arr1[ret] + "</p>")
+            </script>
+        </div>
+        <div class="row">
+            <strong> lastIndexOf() </strong>
+            <br>
+            <script>
+                var arr1 = ["Laranja", "Azul", "Vermelho", "Azul", "Verde"];
+                var ret = arr1.lastIndexOf("Azul");
+                document.write("<p>lastIndexOf() :" + ret + " value = " + arr1[ret] + "</p>")
+            </script>
+        </div>
+        <div class="row">
+            <strong> lastIndexOf(searchElement[, fromIndex]) </strong>
+            <br>
+            <script>
+                var arr1 = ["Laranja", "Azul", "Vermelho", "Azul", "Verde"];
+                var ret = arr1.lastIndexOf("Azul", 2);
+                document.write("<p>lastIndexOf(searchElement[, fromIndex]) :" + ret + " value = " + arr1[ret] + "</p>")
+            </script>
+        </div>
+
+        <div class="row">
+            <strong> Search in practice</strong>
+            <br>
+            <input type="text" id="search">
+            <button onclick="search();">Search</button>
+            <br>
+            <strong>Result: </strong>
+            <br>
+            <span id="result"></span>
+            <script>
+                function search() {
+                    var arr = ["a content of a blog", "new of an article", "recipe for a cake", "programming tips"]
+                    var search = document.getElementById("search").value;
+                    var testKey = null;
+                    var result = "";
+
+                    for (var key in arr) {
+                        var auxArr = arr[key].split(" ");
+                        for (var key2 in auxArr) {
+                            if (auxArr.indexOf(search) > -1) {
+                                if (testKey != key) {
+                                    testKey = key;
+                                    result += "<p>" + arr[key] + "<p>";
+                                }
+                            }
+                        }
+                    }
+
+                    document.getElementById("result").innerHTML = result;
+                }
+            </script>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
