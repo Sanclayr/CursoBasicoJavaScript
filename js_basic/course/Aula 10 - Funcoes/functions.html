@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Function</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Function - Aula 10</h1>
+        <div class="row">
+            <strong> Teste 1: </strong>
+            <br>
+            <script>
+                function add(a, b) {
+                    return parseInt(a) + parseInt(b);
+                }
+                document.write("<p> add: " + add(4, 5) + "</p>");
+            </script>
+
+        </div>
+        <div class="row">
+            <strong> Teste 2: </strong>
+            <br>
+
+            <script>
+                var fatorial = function (n) {
+                    var fac = 1;
+                    for (var y = n; y > 0; y--) {
+                        fac *= y;
+                    }
+                    return fac;
+                };
+
+                document.write("<p> fatorial(4): " + fatorial(4) + "</p>");
+
+
+            </script>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

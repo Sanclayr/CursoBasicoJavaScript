@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Switch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="row">
+        <h1>Switch - Aula 7</h1>
+        <div class="row">
+            <strong> Switch </strong>
+            <br>
+            <script>
+                var color = "red";
+                switch (color) {
+                    case "orange":
+                        document.write("Color: Orange");
+                        break;
+                    case "red":
+                        document.write("Color: Red")
+                        break;
+                    default:
+                        document.write("None");
+                        break;
+                }
+            </script>
+
+        </div>
+        <div class="row">
+            <strong> Switch 2 </strong>
+            <br>
+            <input type="text" id="peso" placeholder="Peso">
+            <select id="frutas">
+                <option value="apple">Apple</option>
+                <option value="watermelon">watermelon</option>
+                <option value="lemon">Lemon</option>
+            </select>
+            <br>
+            <button onclick="balcanca();">Pesar</button>
+            <br>
+            <span id="result"></span>
+            <script>
+                function balcanca() {
+                    var frutas = document.getElementById("frutas").value;
+                    var peso = document.getElementById("peso").value;
+                    if (!peso) {
+                        document.getElementById("result").innerHTML = "Digite um peso";
+                        return;
+                    }
+
+                    switch (frutas) {
+                        case "apple":
+                            document.getElementById("result").innerHTML = "$ " + peso * 0.35;
+                            break;
+                        case "watermelon":
+                            document.getElementById("result").innerHTML = "$ " + peso * 2;
+                            break;
+                        case "lemon":
+                            document.getElementById("result").innerHTML = "$ " + peso * 0.50;
+                            break;
+                        default:
+                            document.getElementById("result").innerHTML = "Produto não registrado";
+                            break;
+                    }
+
+                }
+
+            </script>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
